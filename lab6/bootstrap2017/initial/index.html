@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 6 Responsive Mobile First 3D App </title>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  
+  </head>
+  <body id="bodyColor">
+      
+     <div id="headerColor" class="navbar navbar-preheader navbar-default navbar-fixed-top" role="navigation">
+        <div class="container"> 
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <h1>1oca</h1>
+                    <h2>Cola</h2>
+                    <h3>Journey</h3>
+                    <p>Refreshing the world, one story at a time</p>
+                </a>
+          </div>
+            <div class="navbar-header">       
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>  
+            </div>
+            <div class="navbar-collapse collapse"> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="javascript:swap('home')">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Drinks <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:swap('coke')">Coca Cola</a></li>
+                        <li><a href="javascript:swap('sprite')">Sprite</a></li>
+                        <li><a href="javascript:swap('pepper')">Dr Pepper</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+        <!-- Home page contents -->
+        <div id="home">
+            <div class="row">
+                <div class="col-xs-12" >
+                    <div id="main_3d_image">
+                        <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                            <div class="galleryLinks">
+                                <div id="gallery1"></div>
+                            </div>
+                        </div>
+                        <div id="main_text" class="col-xs-12 col-sm-4">
+                            <div id="title_home"></div> 
+                            <div id="subTitle_home"></div>        
+                            <div id="description_home"></div>  
+                       </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-xs-12 col-sm-4">
+                    <a href="#" class="thumbnail">
+                      <img src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                    </a>
+                    <div id="title_left"></div> 
+                    <div id="subTitle_left"></div>        
+                    <div id="description_left"></div> 
+                    <a href="#" class="btn btn-danger">Find out more ...</a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="#" class="thumbnail">
+                      <img src="assets/images/sprite.jpg" alt="sprite">
+                    </a>
+                    <div id="title_centre"></div> 
+                    <div id="subTitle_centre"></div>        
+                    <div id="description_centre"></div> 
+                    <a href="#" class="btn btn-danger">Find out more ...</a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="#" class="thumbnail">
+                      <img src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                    </a>
+                    <div id="title_right"></div> 
+                    <div id="subTitle_right"></div>        
+                    <div id="description_right"></div> 
+                    <a href="#" class="btn btn-danger">Find out more ...</a>
+                </div>
+            </div>
+        </div> <!-- End home page contents-->
+        
+        <!-- This is the content for Layout Div Tag "coke" -->
+        <div id="coke" style="display:none;">
+            <div class="row"> <!-- A Bootstrap row to hold the mainContents -->
+                <div class="modelBg"> <!-- The original background image for the mainContents ow replaced with new CSS rules -->
+                    <div class="col-xs-2 col-sm-2"> <!-- A Bootstrap column for the cameraBtns -->
+                        <div class="cameraBtns">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary btn-responsive">Camera</button>
+                                <button type="button" class="btn btn-warning btn-responsive" onclick="spin();">Spin</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraFront();">Front</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraBack();">Back</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraLeft();">Left</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraRight();">Right</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraTop();">Top</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraBottom();">Bottom</button>
+                                <button type="button" class="btn btn-danger btn-responsive">Lights</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="headlight();">Headlight</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-xs-7 col-sm-8"> <!-- A Bootstrap column for the model3D -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/coke.x3d" > </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>  
+                    <div class="col-xs-3 col-sm-2 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                        
+                        <div class="galleryLinks">    
+                            <div id="gallery2"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="drinksText">
+                        <!-- Grab the backend data from the data.json file -->
+                        <div id="title_coke"></div> 
+                        <div id="subTitle_coke"></div>        
+                        <div id="description_coke"></div>  
+                        <a href="http://www.coca-cola.co.uk/drinks/coca-cola/" class="btn btn-success">Visit Coke</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+          
+        <!-- This is the content for Layout Div Tag "sprite" -->
+        <div id="sprite" style="display:none;">
+            <div class="row"> <!-- A Bootstrap row to hold the mainContents -->
+                <div class="modelBg"> <!-- The original background image for the mainContents -->
+                    <div class="col-xs-2 col-sm-2"> <!-- A Bootsrap column for the cameraBtns -->
+                        <div class="cameraBtns">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary btn-responsive">Camera</button>
+                                <button type="button" class="btn btn-warning btn-responsive" onclick="spin();">Spin</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraFront();">Front</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraBack();">Back</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraLeft();">Left</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraRight();">Right</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraTop();">Top</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraBottom();">Bottom</button>
+                                <button type="button" class="btn btn-danger btn-responsive">Lights</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="headlight();">Headlight</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-xs-7 col-sm-8"> <!-- A Bootstrap column for the model3D -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/sprite.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>  
+
+                    <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                        <div class="galleryLinks">   
+                            <div id="gallery3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="drinksText">
+                        <div id="title_sprite"></div>     
+                        <div id="subTitle_sprite"></div>        
+                        <div id="description_sprite"></div>   
+                        <a href="http://www.coca-cola.co.uk/drinks/sprite" class="btn btn-success">Visit Sprite</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+          
+        <!-- This is the content for Layout Div Tag "pepper" -->
+        <div id="pepper" style="display:none;">
+            <div class="row"> <!-- A Bootstrap row to hold the mainContents -->
+                <div class="modelBg"> <!-- The original background image for the mainContents -->
+                    <div class="col-xs-2 col-sm-2"> <!-- A Bootstrap column for the cameraBtns -->
+                        <div class="cameraBtns">
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary btn-responsive">Camera</button>
+                                <button type="button" class="btn btn-warning btn-responsive" onclick="spin();">Spin</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraFront();">Front</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraBack();">Back</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraLeft();">Left</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraRight();">Right</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraTop();">Top</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="cameraBottom();">Bottom</button>
+                                <button type="button" class="btn btn-danger btn-responsive">Lights</button>
+                                <button type="button" class="btn btn-success btn-responsive" onclick="headlight();">Headlight</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-xs-7 col-sm-8"> <!-- A Bootstrap column for the model3D -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/pepper.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>  
+                    
+                    <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                        <div class="galleryLinks">    
+                            <div id="gallery4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="drinksText">
+                        <div id="title_pepper"></div>     
+                        <div id="subTitle_pepper"></div>  
+                        <div id="description_pepper"></div>  
+                        <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/" class="btn btn-success">Visit Dr Pepper</a>
+                    </div> 
+                </div>
+            </div>
+        </div> <!-- End pepper contents -->
+          
+      </div> <!-- End 3D App SPA Contents -->
+
+      
+      <div id="footerColor" class="footer">
+          <div class="container">   
+              <div class="navbar-text pull-left">
+                  <p> &copy 2017 3D Apps| <a href="javascript:changeLook()">Restyle</a> | <a href="javascript:changeBack()">Reset</a></p>
+              </div>
+              <div class="navbar-text pull-right">
+                  <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                  <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                  <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+              </div>
+          </div>
+      </div> 
+        
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+      <script src="js/jquery-3.1.1.min.js"></script>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed --> 
+      <script src="js/bootstrap.min.js"></script>
+      
+      <!-- JavaScript to swap for SPA and restyle -->
+      <script src="js/swap_restyle.js"></script>
+      
+      <!-- Include the x3dom JavaScript -->
+      <script type='text/javascript' src='js/x3dom-1.7.2/x3dom.js'></script>
+      
+      <!-- Gallery generator exploiting hook.php and JavaScript -->
+      <script type="text/javascript" src="js/gallery_generator.js"></script>
+      
+      <!-- Simple JavaScript to restyle the 3D App page -->
+      <script src="js/swap_restyle.js"></script>
+      
+      <!-- JavaScript AJAX request backend data -->
+      <script src="js/getJsonData.js"></script>
+      
+      <!-- JavaScript moel interactions -->
+      <script src="js/modelInteractions.js"></script>
+      
+  </body>
+</html>

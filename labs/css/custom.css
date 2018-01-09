@@ -1,0 +1,383 @@
+/* CSS Rules for Lab 1 using Bootstrap.  Note, these rule are laid out non-mobile first.  
+	That is, the larger screen rules are shown first
+	For mobile first you need to swap the order and use min-width in the media queries
+	Check out: https://scotch.io/quick-tips/default-sizes-for-twitter-bootstraps-media-queries
+*/
+
+/* Method to declare your own fonts 
+@font-face {
+	font-family: cocaColaFont;
+	src: url(./lokicola.ttf);
+}
+*/
+/* Some modifications (i.e. overwrite) to the bootstrap.css CSS rules */
+body {
+	padding-top: 130px;
+	padding-bottom: 10px;
+	background-color: #FFF;
+}
+
+/* Replace the Jumbotron with our own image and ain text */ 
+#main_3d_image {
+	background-image: url(../images/main_3D_1400.jpg);
+	background-repeat: no-repeat;
+	height: 462px;
+
+}
+
+#main_text {
+	clear: none;
+	float: right;
+    width: 70%;
+	margin-right: 6.76%;
+	margin-top: 10%;
+	display: block;
+	background-color: rgba(255,255,255,0.8);
+	padding: 12px;
+	border-radius: 10px;
+}
+
+#main_text h2 {
+	color: rgba(0,102,153,1);
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+#main_text h3 {
+	font-size: 24px;
+	margin: 0px;
+}
+#main_text p {
+	font-size: 15px;
+	margin: 0px;
+	line-height: 1.2;
+}
+
+
+/* New CSS rules to better position the navbar and increase its height, Bootstrap defaults tend to make your site 
+	look like a Bootstrap clone! */
+.navbar .container { 
+	min-height: 120px; 
+}
+
+.navbar-fixed-top {
+    position: fixed; /* You could also try static, which allows the navbar disappear up */
+    margin-bottom: 10px;
+}
+
+/* CSS rule to inherit the Bootstrap default text color and remove decoration on a link — probably obsolete now, because I have made new CSS rules below? */
+.navbar .container .navbar-brand {
+    color: white;
+    font-size: 300%;
+    margin-top: 10%;
+}
+
+.navbar .container .navbar-brand:hover {
+    color: green;
+    text-decoration: none;
+}
+
+/* Footer navbar-text */
+.navbar-text > a {
+    color: white;
+	text-decoration: none;
+}
+
+.navbar-text:hover > a {
+    color: green;
+	text-decoration: none;
+}
+
+/* CSS rule to overwrite the navbar-brand font color  */
+.navbar .container  .navbar-brand > a {
+    color: blue;
+	text-decoration: none;
+}
+.navbar .container  .navbar-brand.h1 {
+    color: blue;
+    text-decoration: none;
+}
+
+/* CSS rule to overwrite the navbar-brand font hover color  */
+.navbar .container .navbar-brand:hover > a{
+    color: green;
+}
+
+/* CSS rule to overwrite the navbar-default background and border color — again, helps to stop your site looking like a Bootstrap clone! */
+.navbar-default {
+	background-color: #760003; /* Sets the navbar background color */
+    border-color: yellow; /* Sets the navbar border color */
+    border-style: solid;
+    border-width: 0px;
+}
+
+/* ++++++++++++++++++++++++++NAVIGATION MENU+++++++++++++++++++++++*/
+
+/* CSS rules to overwrite the position of the Bootstrap menu, adjust each link and its font-size.
+	this screws up the min screen size for the drop down menu, so this needs fixing! 
+
+	Actually, I started to redesign these by trial and error, but the Bootstrapbay Bootstrap 
+	Tutorial Part 11 — CSS Modifications to Navbar and Buttons shows how to do this:
+	https://www.youtube.com/watch?v=7v2yC3GyDHU
+*/
+.navbar .nav  {
+    margin-top: 60px;	
+	margin-right: 20px;
+}
+
+.navbar .nav > li > a {
+    padding: 10px 15px 10px; /* Need to sort this padding for the collapse menu */
+    font-size: 18px;
+}
+
+/* New CSS rules to change all the Bootstrap defaults for the menu link text color, hover, background, focus, open
+	See video 11. */
+
+/* CSS rule to overwrite the bootstrap.css text hover color on the navbar */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: green;  
+}
+
+/* CSS rule to overwrite the bootstrap.css rules for setting the active font color and background colour */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >  a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: white; /* Font color for active font */
+	background-color: #3399ff; /* Blue color for background */
+}
+
+/* These CSS rules need some work to sort out the collapsed menu */
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #FFF;
+   	text-decoration: none;
+  	background-color: #760003;  /*change color of links in drop down here*/
+}
+
+.navbar-default .navbar-nav > li > a {
+   	color: white; /* Change active text color here */
+}
+
+/* CSS rule to modify the icon button background on hover */
+.navbar-preheader .navbar-toggle:hover {
+    background-color: white;
+}
+
+/* These next two CSS rules control the style of the icon bar */
+.navbar-preheader .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-preheader .navbar-toggle:hover .icon-bar {
+    background-color: red;
+}
+
+/* Multilevel drop down menu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+
+/* ++++++++++++++++++++++++++END NAVIGATION MENU+++++++++++++++++++++++*/
+
+/* Some simple CSS rules for styling p, h1 to h6, etc. in the main contents containers */
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	/*font-family: cocaColaFont;*/
+}
+
+/* CSS rule to adjust the thumnail position relative to the Jumbotron */
+.thumbnail{
+	margin-top: 10px;
+}
+
+.thumbnail > img{
+	width: 100%;
+}
+
+/* CSS rule to adjust the Jumbotron bottom margin*/
+.jumbotron {
+	margin-bottom: -2px;
+}
+
+/* CSS rule to astyle the footer */
+.footer {
+	color: #FFF;
+	margin-top: 30px;
+	background-color: #760003;
+}
+
+@media only screen and (max-width:768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .navbar .container .navbar-brand {
+        color: white;
+        font-size: 200%;
+        margin-top: 2%;
+    }
+    
+    .navbar .container .navbar-brand:hover {
+        color: green;
+        text-decoration: none;
+    }
+
+    .navbar .container { 
+        min-height: 90px; 
+    }
+
+    .navbar .nav > li > a {
+        margin-top: 5px;
+        padding: 10px 15px 0px; /* Need to sort this padding for the collapse menu */
+        font-size: 12px;
+    }
+
+    #main_3d_image {
+        background-image: url(.../images/main_3D_970.jpg);
+        background-repeat: no-repeat;
+        height: 305px;
+    }
+
+    #main_text {
+        clear: none;
+        float: right;
+        margin-left: 2.2%;
+        width: 70%;
+        display: block;
+        margin-right: 5%;
+        margin-top: 8%;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    #main_text h2 {
+        color: rgba(0,102,153,1);
+        font-size: 17px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    #main_text h3 {
+        font-size: 11px;
+        margin: 0px;
+    }
+    #main_text p {
+        font-size: 10px;
+        margin: 0px;
+        line-height: 1.2;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+    body {
+        padding-top: 50px;
+    }
+
+    .navbar .container .navbar-brand {
+        font-size: 160%;
+        margin-top: 1%;
+    } 
+
+    .navbar .container .navbar-brand:hover {
+        color: green;
+        text-decoration: none;
+    }
+
+    .navbar .container { 
+        min-height: 50px; 
+    }
+
+    .navbar .nav > li > a {
+        margin-top: 5px;
+        padding: 10px 15px 0px; /* Need to sort this padding for the collapse menu */
+        font-size: 12px;
+    }
+
+    #main_3d_image {
+        background-image: url(../images/main_3D_538.jpg);
+        background-repeat: no-repeat;
+        height: 200px;
+    }
+
+    #main_text {
+        clear: none;
+        float: right;
+        margin-left: 4.1666%;
+        width: 80%;
+        display: block;
+        background-color: rgba(255,255,255,0.8);
+        margin-right: 3%;
+        margin-top: 8%;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    #main_text h2 {
+        color: rgba(0,102,153,1);
+        font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    #main_text h3 {
+        font-size: 11px;
+        margin: 0px;
+    }
+    #main_text p {
+        font-size: 9px;
+        margin: 0px;
+        line-height: 1.2;
+    }
+}
+
+
+
+
+
+  

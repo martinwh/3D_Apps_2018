@@ -1,0 +1,56 @@
+{
+    "pageTextData": [
+		{
+		"title": "Laboratory 1",
+		"subTitle": " ",		
+		"description": "This laboratory is largely focused on acquiring the skills needed to create a responsive mobile first web page. Your Lab 1 mobile first web page will form a template — CSS and HTML5 resource — for your basic 3D app in Lab 4 and 5, in which you will integrate your 3D models created in Lab 2 and 3. You will utilise either Adobe Dreamweaver's or Bootstrap's fluid grid method for this responsive mobile first web page. There are 2 tutorials available for Lab 1: 1) using Dreamweaver as a development environment, and 2) using a lightweight text editor, such as NotePad++, Brackets, Sublime Text or Atom and the Bootstrap 3.0 Framework. However, you are free to use other tools and frontend framworks as you wish, subject to certain restrictions outlined in the tutorial, i.e. you have to design your own HTML5/CSS template."
+
+		},
+		{
+		"title": "Laboratory 2",
+		"subTitle": " ",		
+		"description": "This laboratory introduces Autodesk 3ds Max 2017 and the basic principles of 3D modelling and texturing required for this particular module.This lab work is focused on acquiring the skills needed to create, i.e. model, texture, illuminate and visualise 3D models suitable for rendering in a responsive mobile first web 3D application — a 3D App. Your Coke, Sprite and Pepper models are assessed in Part 1 Assignment for UGs. The Sprite bottle is meant to represent, roughly, the sort of complexity we expect for you final assignment models — the image above shows the Sprite bottle broken down into component parts with materials and textures applied"
+		},
+		{
+		"title": "Laboratory 3",
+		"subTitle": " ",		
+		"description": "This laboratory focuses on understanding a workflow that allows you to export your 3ds max models into VRML97 (virtual reality modelling language) enabling you to test that your models will eventually render in a responsive mobile first web 3D application. We then convert your models into an X3D format suitable for rendering in the HTML Document Object Model. To do this we use a technology called X3DOM that allows us to \"Integrate 3D content seamlessly into your 3D App - the scene is directly written into the HTML markup with no plugins needed — simply include a javascript file\"." 
+		},
+        {
+		"title": "Laboratory 4",
+		"subTitle": " ",		
+		"description": "This laboratory is focused on converting your Lab 1 Coca Cola branded responsive mobile first template into a version that embeds (or writes) your Lab 3 models as inline X3D models directly into the HTML5 DOM. In Lab 3 you will have tested that your 3D models render as both X3D (i.e. renders in an X3D viewer) and X3DOM (i.e. X3D models in an HTML5 web page). In this lab you will adapt your HTML and CSS to create the layout and styling for three more responsive mobile web 3D App pages, one each for your coke, sprite and pepper models. You will then link them together into a basic 3D App, while also creating the basic layout to interact with your 3D models, e.g. include a panel to change cameras, animate the model, and so on."
+        },
+		{
+		"title": "Laboratory 5",
+		"subTitle": " ",		
+		"description": "This laboratory is focused on refining your Lab 4 HTML/CSS responsive mobile template to introduce interactivity with some simple JavaScript functions that, for example converts your 3D App into a single page site (using a JavaScript content swap), dynamically restyles the 3D App (using the document.getElementById() function), and builds in a JavaScript (exploits XMLHttpRequest) and PHP based gallery that could be exploited to load new models on trigger the content swap, amongst other uses. This will be your first introduction to PHP with the image gallery, and incidentally AJAX using and XMLHttpRequest."
+		},
+		{
+		"title": "Laboratory 6",
+		"subTitle": " ",		
+		"description": "This laboratory introduces AJAX (Asynchonous JavaScript and XML) to dynamically update content on your basic 3D App; although you have actually already done this, perhaps without realising it. In Lab 5 we build the gallery code, which used the XMLHttpRequest method to asynchronous request filenames from the web server using a PHP hook. JavaScript runs continously on the client-side, while the PHP has to be invoked. In Lab 6 we extend the use of AJAX to make asynchronous requests for content from the back-end server, where for simplicity the data is stord in a JSON file. Here, you will exploit JQuery's .getJSON() method to get data from the backend server. additionally, The BS 2017 Initial version instantiates three X3D renderers, which although it works is a touch naive and utilises more resource than is necessary. The refined version instantiates 1 X3D renderer and switchs in and out different scenes. The final version will tidy up, linking scene switching to the gallery, and perhaps use PHP to include the header and footer."
+		},
+		{
+		"title": "Laboratory 7",
+		"subTitle": " ",		
+		"description": " "
+		},
+        {
+		"title": "Laboratory 8",
+		"subTitle": " ",		
+		"description": " "
+        },
+		{
+		"title": "Laboratory 9",
+		"subTitle": " ",		
+		"description": " "
+		},
+		{
+		"title": "Mobile Web 3D Applications",
+		"subTitle": "Live Feedback Site",		
+		"description": "The main goal of this 3D App site is to provide live feedback on the laboratory results on a week by week basis. Here, you will find example results that you can study up to week 6. The idea is that, while completing the labs, if you get stuck, you can examine this site for the expected results, your results may be slightly different depending on your design elements, e.g. CSS, you may have a better model, etc., and if needed you can use Chrome's Developer Tools to dig further to examine the code."
+
+		}
+	]
+}

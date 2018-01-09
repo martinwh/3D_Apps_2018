@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#coke").show();
+    $("#sprite").hide();
+    $("#pepper").hide();
+    $("#cokeModel").show();
+    $("#spriteModel").hide();
+    $("#pepperModel").hide();
+});
+
+function showCoke() {
+    $("button").click(function(){
+        $("#coke").show();
+        $("#sprite").hide();
+    	$("#pepper").hide();
+    }); 
+}
+
+function showSprite() {
+    $("button").click(function(){
+        $("#coke").hide();
+        $("#sprite").show();
+    	$("#pepper").hide();
+    }); 
+}
+
+function showPepper() {
+    $("button").click(function(){
+        $("#coke").hide();
+        $("#sprite").hide();
+    	$("#pepper").show();
+    }); 
+}
+
+function coke() {
+    $("button").click(function(){
+        $("#cokeModel").show();
+        $("#spriteModel").hide();
+    	$("#pepperModel").hide();
+    }); 
+}
+
+function sprite() {
+    $("button").click(function(){
+        $("#cokeModel").hide();
+        $("#spriteModel").show();
+    	$("#pepperModel").hide();
+    }); 
+}
+
+function pepper() {
+    $("button").click(function(){
+        $("#cokeModel").hide();
+        $("#spriteModel").hide();
+    	$("#pepperModel").show();
+    }); 
+}
+
+</script>
+</head>
+<body>
+
+<button type="button" class="btn btn-success btn-responsive" onclick="showCoke();coke();">Coke</button>
+<button type="button" class="btn btn-success btn-responsive" onclick="showSprite();sprite();">Sprite</button>
+<button type="button" class="btn btn-success btn-responsive" onclick="showPepper();pepper();">Pepper</button>
+
+<br><br>
+<div id="cokeModel">COKE MODEL</div>
+<div id="spriteModel">SPRITE MODEL</div>
+<div id="pepperModel">PEPPER MODEL</div>
+
+<br><br>
+<div id="coke">Coke Content.</div>
+<div id="sprite">Sprite Content.</div>
+<div id="pepper">Pepper Content.</div>
+
+</body>
+</html>

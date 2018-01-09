@@ -1,0 +1,82 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Responsive 3-Line Menu</title>
+	<style type="text/css">
+	* {
+		margin: 2;
+		padding: 2;
+	}
+	ul {
+		width:100%;
+		margin-top: 10px;
+		margin-right:10px;
+	}
+	li {
+		width:15%;
+		float:right;
+		border-right: 1px solid #eee;
+	}
+	li:last-child {
+		border-right:none;
+	}
+	li a {
+		display: block;
+		width:80%;
+		background:#ddd;
+		padding: 4% 10%;
+		font-size:1.35em;
+		text-decoration: none;
+	}
+	@media screen and (max-width: 568px) {
+		#menu {
+			width:1.35em;
+			display: block;
+			background:#ddd;
+			font-size:1.35em;
+			text-align: right;
+			margin-top: 10px;
+		}
+		#nav.js {
+			display: none;
+		}
+		ul {
+			width:100%;
+		}
+		li {
+			width:100%;
+			border-right:none;
+		}
+	}
+	@media screen and (min-width: 568px) {
+		#menu {
+			display: none;
+		}
+	}
+	</style>
+</head>
+<body>
+
+	
+	<ul id="nav">
+		<li><a href="#Coke">Coke</a></li>
+		<li><a href="#Sprite">Sprite</a></li>
+		<li><a href="#Pepper">Pepper</a></li>
+		<li><a href="#Home">Home</a></li>
+	</ul>
+	
+	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$("#nav").addClass("js").before('<div id="menu">&#9776;</div>');
+	$("#menu").click(function(){
+		$("#nav").toggle();
+	});
+	$(window).resize(function(){
+		if(window.innerWidth > 568) {
+			$("#nav").removeAttr("style");
+		}
+	});
+</script>
+</body>
+</html>

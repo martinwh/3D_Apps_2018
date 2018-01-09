@@ -1,0 +1,587 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		9;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-top: 10px;
+	width: 100%;
+	display: block;
+}
+#main_3d_image {
+	background-image: url(../assets/images/main_3D_538.jpg);
+	background-repeat: no-repeat;
+	height: 180px;
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-top: 10px;
+	width: 100%;
+	display: block;
+}
+#left_column {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#centre_column {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#right_column {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-bottom: 10px;
+	width: 100%;
+	display: block;
+}
+#main_text {
+	clear: none;
+	float: right;
+	margin-left: 4.1666%;
+	width: 58.3333%;
+	display: block;
+	background-color: rgba(255,255,255,0.8);
+	margin-right: 3%;
+	margin-top: 20%;
+	padding: 12px;
+	border-radius: 10px;
+}
+#main_text h2 {
+	color: rgba(0,102,153,1);
+	font-size: 13px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#main_text h3 {
+	font-size: 11px;
+	margin: 0px;
+}
+#main_text p {
+	font-size: 9px;
+	margin: 0px;
+	line-height: 1.2;
+}
+#mainContentsContainer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#drinksText {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+.logo {
+	float: left;
+	width: 40%;
+	margin-top: 0;
+}
+.navigation {
+	float: right;
+	width: 60%;
+	margin-top: 8px;
+	margin-right: 0;
+}
+#cameraButtons {
+	clear: both;
+	float: left;
+	margin: 5px;
+	width: 22%;
+	padding: 4px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.8);
+	display: block;
+}
+#cameraButtons h2 {
+	color: black;
+	font-size: 13px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 7px;
+}
+
+#model3d {
+	clear: none;
+	float: left;
+	margin-top: 5px;
+	margin-left: .5%;
+	width: 58%;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.8);
+	display: block;
+}
+
+X3D, x3d {
+  background: rgba(255,255,255,0);
+  width: 100%;
+  height: 145px;
+  border-radius: 5px;
+  border: 0px solid white;
+}
+
+#galleryLinks {
+	clear: none;
+	float: right;
+	margin-top: 5px;
+	margin-left: 1%;
+	width: 15%;
+	display: block;
+}
+
+#home {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#coke {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#sprite {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+#pepper {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.0333%;
+	padding-right: 1.0333%;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#main_3d_image {
+	background-image: url(../assets/images/main_3D_970.jpg);
+	background-repeat: no-repeat;
+	height: 305px;
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#left_column {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 31.5%;
+	display: block;
+}
+#centre_column {
+	clear: none;
+	float: left;
+	margin-left: 2.5%;
+	width: 31.5%;
+	display: block;
+}
+#right_column {
+	clear: none;
+	float: left;
+	margin-left: 2.5%;
+	width: 31.5%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#main_text {
+	clear: none;
+	float: right;
+	margin-left: 2.2%;
+	width: 31.8181%;
+	display: block;
+	margin-right: 5%;
+	margin-top: 22%;
+}
+#main_text h2 {
+	color: rgba(0,102,153,1);
+	font-size: 17px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#main_text h3 {
+	font-size: 11px;
+	margin: 0px;
+}
+#main_text p {
+	font-size: 10px;
+	margin: 0px;
+	line-height: 1.2;
+}
+#mainContentsContainer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#galleryLinks {
+	clear: none;
+	float: right;
+	margin-top: 5px;
+	margin-left: 2%;
+	width: 19%;
+	display: block;
+}
+#drinksText {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+.logo {
+	float: left;
+	width: 40%;
+	margin-top: 5px;
+}
+.navigation {
+	float: right;
+	width: 60%;
+	margin-top: 30px;
+	margin-right: 0px;
+}
+#cameraButtons {
+	clear: both;
+	float: left;
+	margin: 5px;
+	width: 18%;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.8);
+	display: block;
+}
+#cameraButtons h2 {
+	color: black;
+	font-size: 16px;
+	margin-top: 7px;
+	margin-bottom: 12px;
+	padding-left: 8px;
+}
+#model3d {
+	clear: none;
+	float: left;
+	margin-top: 5px;
+	margin-left: 2%;
+	width: 56%;
+	display: block;
+}
+
+X3D, x3d {
+  background: rgba(255,255,255,0);
+  width: 100%;
+  height: 270px;
+  border-radius: 5px;
+  border: 0px solid white;
+}
+
+#home {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+#coke {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+#sprite {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+#pepper {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#main_3d_image {
+	background-image: url(../assets/images/main_3D_1400.jpg);
+	background-repeat: no-repeat;
+	height: 462px;
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#left_column {
+	clear: none;
+	float: left;
+	margin-left: 0;
+	width: 32.2033%;
+	display: block;
+}
+#centre_column {
+	clear: none;
+	float: left;
+	margin-left: 1.6949%;
+	width: 32.2033%;
+	display: block;
+}
+#right_column {
+	clear: none;
+	float: left;
+	margin-left: 1.6949%;
+	width: 32.2033%;
+	display: block;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#main_text {
+	clear: none;
+	float: right;
+	margin-left: 1.6949%;
+	width: 32.2033%;
+	display: block;
+	margin-right: 6.76%;
+	margin-top: 21%;
+}
+#main_text h2 {
+	color: rgba(0,102,153,1);
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#main_text h3 {
+	font-size: 16px;
+	margin: 0px;
+}
+#main_text p {
+	font-size: 15px;
+	margin: 0px;
+	line-height: 1.2;
+}
+#mainContentsContainer {
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+	
+#drinksText {
+	float: left;
+	margin-left: 0px;
+	width: 100%;
+}
+
+.logo {
+	float: left;
+	width: 40%;
+}
+
+.navigation {
+	float: right;
+	width: 60%;
+	margin-top: 40px;
+	margin-right: 0;
+}
+
+#cameraButtons {
+	clear: both;
+	float: left;
+	margin: 10px;
+	width: 10%;
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.8);
+	display: block;
+}
+
+#cameraButtons h2 {
+	color: black;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 16px;
+}
+
+#model3d {
+	clear: none;
+	float: left;
+	margin-top: 10px;
+	margin-left: 0.5%;
+	width: 70%;
+	height: 445px;
+	padding: 10px;
+	border: 1px solid black; 
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.8);
+	display: block;
+}
+
+#galleryLinks {
+	clear: none;
+	float: right;
+	margin-top: 10px;
+	margin-left: 1.6949%;
+	width: 14%;
+	display: block;
+}
+
+X3D, x3d {
+  background: rgba(255,255,255,0);
+  width: 100%;
+  height: 425px;
+  border-radius: 5px;
+  border: 0px solid white;
+}
+
+#home {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+#coke {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+#sprite {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+#pepper {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+}

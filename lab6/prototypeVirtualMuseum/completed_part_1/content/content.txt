@@ -1,0 +1,67 @@
+Content for header
+
+<h4><img src="http://www.sierraleoneheritage.org/assets/images/logo3.png" alt="Sierra Leone Heritage" />
+
+</br>&nbsp;&nbsp;&nbsp;Reanimating Cultural Heritage</4>
+
+
+
+Content for objectPageSelector
+
+<h3>Browse Objects</h3>
+
+<p><a href="#">Object 1</a> |  <a href="#">Object 2</a> | <a href="#">Object 3</a> | <a href="#">Object 4</a></p>
+
+
+
+Content for mediaObjects
+
+<h3>Media Objects</h3>
+
+<p><img src="http://www.sierraleoneheritage.org/assets/objects/british_museum/image/7398a (a)" alt="Sapi-Portuguese Ivory Bowl" /></p>
+
+
+
+
+Content for objectMediaSelector
+
+<h3>Select Media Object</h3>
+
+<p><a href="#">Image</a> | <a href="#">Video</a> |  <a href="#">3D</a> | <a href="#">Audio</a> | <a href="#">AR</a></p>
+
+
+
+Content for objectDescription
+
+<h3>Description</h3>
+
+<p>Sapi-Portuguese Ivory Bowl</p>
+
+<p>This is a 16th century carved ivory bowl, on a shallow pedestal. It has geometric incised carving running in panels from the rim, to the base. The British Museum records refer to this as Afro-Portuguese, a term used to indicate items from Sierra Leone and Nigeria, made for a Portuguese market in the 15th and 16th centuries. Such items display a mixture of African and European elements and motifs in their overall form and ornamentation, and were considered prestige items across Europe. A more specific term for items patronised in Sierra Leone, is Sapi-Portuguese.</p>
+
+
+
+Content for objectData
+
+<h3>Further Information</h3>
+
+<ul>
+   <li><b>Object: </b><p style="display:inline">Sapi-Portuguese Ivory Bowl</p></li>
+   <li><b>Materials: </b><p style="display:inline">Bone, ivory, tooth</p></li>
+   <li><b>Culture group: </b><p style="display:inline">Bullom; Temne</p></li>
+   <li><b>Dimensions: </b><p style="display:inline">Unknown</p></li>
+   <li><b>Production Date: </b><p style="display:inline">1490-1530</p></li>
+   <li><b>Associated Places: </b><p style="display:inline">Unknown</p></li>
+   <li><b>Associated People: </b><p style="display:inline">Augustus Wollaston Franks</p></li>
+   <li><b>Museum: </b><p style="display:inline">British Museum</p></li>
+   <li><b>Accession Number: </b><p style="display:inline">BM:Af.7398.a</p></li>
+</ul>
+
+
+
+
+Content for footer
+
+<h4>About SierraLeoneHeritage.org</h4>
+
+<p><a href="#">Contact us</a> to learn more about Sierra Leone Cultural Heritage Objects dispersed around the worlds museums.</p>

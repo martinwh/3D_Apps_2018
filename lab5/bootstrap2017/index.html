@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 5 Responsive Mobile First 3D App </title>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' type='text/css' href='css/x3dom.css'>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  
+  </head>
+  <body id="bodyColor">
+      
+     <div id="headerColor" class="navbar navbar-preheader navbar-default navbar-fixed-top" role="navigation">
+        <div class="container"> 
+            <div class="logo">
+                <a class="navbar-brand" href="#">
+                    <h1>1oca</h1>
+                    <h2>Cola</h2>
+                    <h3>Journey</h3>
+                    <p>Refreshing the world, one story at a time</p>
+                </a>
+          </div>
+            <div class="navbar-header">       
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>  
+            </div>
+            <div class="navbar-collapse collapse"> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="javascript:swap('home')">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Drinks <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:swap('coke')">Coca Cola</a></li>
+                        <li><a href="javascript:swap('sprite')">Sprite</a></li>
+                        <li><a href="javascript:swap('pepper')">Dr Pepper</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+        <!-- Home page contents -->
+        <div id="home">
+            <div class="row">
+                <div class="col-xs-12" >
+                    <div id="main_3d_image">
+                        <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                            <div class="galleryLinks">
+                                <div id="gallery1"></div>
+                            </div>
+                        </div>
+                        <div id="main_text" class="col-xs-12 col-sm-4">
+                          <h2>Coca Cola Great Britain</h2>
+                          <h3>Founded by Dr John S Pemberton</h3>
+                          <p>The Coca‑Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands.</p>
+                       </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-xs-12 col-sm-4">
+                    <a href="#" class="thumbnail">
+                      <img src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                    </a>
+                    <h3>Coca Cola</h3>
+                    <p>In 1886 in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled. Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done ... booyah! He had invented Coca Cola.</p>
+                    <a href="#" class="btn btn-danger">Find out more ...</a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="#" class="thumbnail">
+                      <img src="assets/images/sprite.jpg" alt="sprite">
+                    </a>
+                    <h3>Sprite</h3>
+                    <p>First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries. Sprite Zero, part of Coca Cola's no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.</p>
+                    <a href="#" class="btn btn-danger">Find out more ...</a>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <a href="#" class="thumbnail">
+                      <img src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                    </a>
+                    <h3>Dr Pepper</h3>
+                    <p>Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste of Dr Pepper has been popular ever since.</p>
+                    <a href="#" class="btn btn-danger">Find out more ...</a>
+                </div>
+            </div>
+        </div> <!-- End home page contents-->
+        
+        <!-- This is the content for Layout Div Tag "coke" -->
+        <div id="coke" style="display:none;">
+            <div class="row"> <!-- A Bootstrap row to hold the mainContents -->
+                <div id="main_3d_image"> <!-- The original background image for the mainContents -->
+                    <div class="col-xs-3 col-sm-2"> <!-- A Bootsrap column for the cameraBtns -->
+                        <div class="cameraBtns">
+                            <p class="thicker">Camera</p>
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary btn-responsive">Perspective</button>
+                                <button type="button" class="btn btn-success btn-responsive">Front</button>
+                                <button type="button" class="btn btn-success btn-responsive">Back</button>
+                                <button type="button" class="btn btn-success btn-responsive">left</button>
+                                <button type="button" class="btn btn-success btn-responsive">Right</button>
+                                <button type="button" class="btn btn-success btn-responsive">Top</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-xs-6 col-sm-8"> <!-- A Bootstrap column for the model3D -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline url="assets/x3d/coke.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>  
+                    <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                        
+                        <div class="galleryLinks">    
+                            <div id="gallery2"></div>
+                            
+                            <!--
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                            </a>
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/sprite.jpg" alt="sprite">
+                            </a>
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                            </a>    
+                            -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="drinksText">
+                        <h2>Coca Cola</h2>
+                        <p>In 1886 in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled. Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done ... booyah! He had invented Coca Cola.</p>
+
+                        <a href="#" class="btn btn-danger">Find out more ...</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+          
+        <!-- This is the content for Layout Div Tag "sprite" -->
+        <div id="sprite" style="display:none;">
+            <div class="row"> <!-- A Bootstrap row to hold the mainContents -->
+                <div id="main_3d_image"> <!-- The original background image for the mainContents -->
+                    <div class="col-xs-3 col-sm-2"> <!-- A Bootsrap column for the cameraBtns -->
+                        <div class="cameraBtns">
+                            <p class="thicker">Camera</p>
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary btn-responsive">Perspective</button>
+                                <button type="button" class="btn btn-success btn-responsive">Front</button>
+                                <button type="button" class="btn btn-success btn-responsive">Back</button>
+                                <button type="button" class="btn btn-success btn-responsive">left</button>
+                                <button type="button" class="btn btn-success btn-responsive">Right</button>
+                                <button type="button" class="btn btn-success btn-responsive">Top</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-xs-6 col-sm-8"> <!-- A Bootstrap column for the model3D -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline url="assets/x3d/sprite.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>  
+
+                    <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                        <div class="galleryLinks">   
+                            <div id="gallery3"></div>
+                            <!--
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                            </a>
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/sprite.jpg" alt="sprite">
+                            </a>
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                            </a>    
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="drinksText">
+                        <h2>Sprite</h2>
+                        <p>First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
+    Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.</p>
+
+                        <a href="#" class="btn btn-danger">Find out more ...</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+          
+        <!-- This is the content for Layout Div Tag "pepper" -->
+        <div id="pepper" style="display:none;">
+            <div class="row"> <!-- A Bootstrap row to hold the mainContents -->
+                <div id="main_3d_image"> <!-- The original background image for the mainContents -->
+                    <div class="col-xs-3 col-sm-2"> <!-- A Bootsrap column for the cameraBtns -->
+                        <div class="cameraBtns">
+                            <p class="thicker">Camera</p>
+                            <div class="btn-group-vertical">
+                                <button type="button" class="btn btn-primary btn-responsive">Perspective</button>
+                                <button type="button" class="btn btn-success btn-responsive">Front</button>
+                                <button type="button" class="btn btn-success btn-responsive">Back</button>
+                                <button type="button" class="btn btn-success btn-responsive">left</button>
+                                <button type="button" class="btn btn-success btn-responsive">Right</button>
+                                <button type="button" class="btn btn-success btn-responsive">Top</button>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-xs-6 col-sm-8"> <!-- A Bootstrap column for the model3D -->
+                        <div class="model3D">
+                            <x3d>
+                                <scene>
+                                    <inline url="assets/x3d/pepper.x3d"> </inline>
+                                </scene>
+                            </x3d>
+                        </div>
+                    </div>  
+                    
+                    <div class="col-xs-3 col-sm-3 col-md-2 pull-right"> <!-- A Bootstrap column for the galleryLinks -->
+                        <div class="galleryLinks">    
+                            <div id="gallery4"></div>
+                            
+                            <!--
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/coca_cola.jpg" alt="Coca Cola">
+                            </a>
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/sprite.jpg" alt="sprite">
+                            </a>
+                            <a href="#" class="thumbnail">
+                              <img src="assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                            </a>    
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="drinksText">
+                        <h2>Dr pepper</h2>
+                        <p>Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on.
+                        It was created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste of Dr Pepper has been popular ever since.</p>
+
+                        <a href="#" class="btn btn-danger">Find out more ...</a>
+                    </div> 
+                </div>
+            </div>
+        </div> <!-- End pepper contents -->
+          
+      </div> <!-- End 3D App SPA Contents -->
+
+      
+      <div id="footerColor" class="footer">
+          <div class="container">   
+              <div class="navbar-text pull-left">
+                  <p> &copy 2017 3D Apps| <a href="javascript:changeLook()">Restyle</a> | <a href="javascript:changeBack()">Reset</a></p>
+              </div>
+              <div class="navbar-text pull-right">
+                  <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                  <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                  <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+              </div>
+          </div>
+      </div> 
+        
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+      <script src="js/jquery-3.1.1.min.js"></script>
+
+      <!-- Include all compiled plugins (below), or include individual files as needed --> 
+      <script src="js/bootstrap.min.js"></script>
+      
+      <!-- JavaScript to swap for SPA and restyle -->
+      <script src="js/swap_restyle.js"></script>
+      
+      <!-- Include the x3dom JavaScript -->
+      <script type='text/javascript' src='js/x3dom-1.7.2/x3dom.js'></script>
+      
+      <!-- Gallery generator exploiting hook.php and JavaScript -->
+      <script type="text/javascript" src="js/gallery_generator.js"></script>
+      
+      <!-- Simple JavaScript to restyle the 3D App page -->
+      <script src="js/swap_restyle.js"></script>
+      
+  </body>
+</html>

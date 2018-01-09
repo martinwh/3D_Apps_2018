@@ -1,0 +1,242 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 6 AJAX 3D App</title>
+<link rel='stylesheet' type='text/css' href='styles/x3dom.css'></link>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="styles/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="styles/web_mobile.css" rel="stylesheet" type="text/css">
+<link href="styles/format3d.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script src="scripts/respond.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='http://www.x3dom.org/x3dom/release/x3dom.js'></script>
+<script type="text/javascript" src="scripts/gallery_generator.js"></script>
+<script src="scripts/swap_restyle.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="scripts/getJsonData.js"></script>
+<script src="scripts/animateModel.js"></script>
+
+</head>
+<body id="body">
+<div class="gridContainer clearfix">
+  <div id="header">
+    <div class="logo">
+        <h1>1oca</h1>
+        <h2>Cola</h2>
+        <h3>Journey</h3>
+        <p>Refreshing the world, one story at a time</p>
+    </div>
+    <div class="navigation">
+    	<div class="pullRight">
+        	<ul>
+              <li><a href="javascript:swap('home')" class="navBtn-primary">Home</a></li>
+              <li><a href="javascript:swap('coke')" class="navBtn-success">Coke</a></li>
+              <li><a href="javascript:swap('sprite')" class="navBtn-success">Sprite</a></li>
+              <li><a href="javascript:swap('pepper')" class="navBtn-success">Pepper</a></li>
+        	</ul>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Home page contents -->
+  <div id="home">
+    <div id="main_3d_image">
+        <div id="gallery1"></div>
+            <div id="main_text">
+				<div id="title_home"></div> 
+            	<div id="subTitle_home"></div>        
+         		<div id="description_home"></div>  
+            </div>
+    </div>
+      
+    <div id="left_column">
+        <p><img class="imageBox" src="assets/images/coca_cola.jpg" alt="Coca Cola"></p> 
+			<div id="title_left"></div> 
+            <div id="subTitle_left"></div>        
+         	<div id="description_left"></div> 
+        <p> <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola/" class="button">Find out more ...</a></p>
+    </div>
+      
+    <div id="centre_column">
+        <p><img class="imageBox" src="assets/images/sprite.jpg" alt="Sprite"></p>
+			<div id="title_centre"></div> 
+            <div id="subTitle_centre"></div>        
+         	<div id="description_centre"></div> 
+        <p><a href="http://www.coca-cola.co.uk/drinks/sprite/sprite/" class="button">Find out more ...</a></p>
+    </div>
+    
+    <div id="right_column">
+        <p><img class="imageBox" src="assets/images/dr_pepper.jpg" alt="Dr Pepper"></p>
+			<div id="title_right"></div> 
+            <div id="subTitle_right"></div>        
+         	<div id="description_right"></div> 
+        <p><a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper/" class="button">Find out more ...</a></p>
+    </div>
+    
+  </div>
+  <!-- End home page contents-->
+  
+  <!-- This is the content for Layout Div Tag "coke" -->
+  <div id="coke" style="display:none;">
+    <div class="modelBg">
+    <!--
+    <div id="main_3d_image"> 
+    -->
+        <div id="cameraButtons">
+            <!-- <h2>Camera</h2> -->
+            <div class="btn-group-vertical">
+            	<!-- Note the onclick='animateModel();' added to the button -->
+                <button type="button" class="btn btn-primary btn-responsive">Cameras</button>
+                <button type="button" class="btn btn-success btn-responsive" onclick='animateModel();'>Spin</button>
+                <button type="button" class="btn btn-success btn-responsive">Angle</button>
+                <button type="button" class="btn btn-success btn-responsive">Back</button>
+                <button type="button" class="btn btn-success btn-responsive">Left</button>
+                <button type="button" class="btn btn-success btn-responsive">Right</button>
+                <button type="button" class="btn btn-success btn-responsive">Top</button>
+                <button type="button" class="btn btn-success btn-responsive">Front</button>
+            </div>
+        </div>
+        <!-- Insert your 3D models here -->
+        <div id="model3d">
+            <x3d >
+                <scene>
+                    <inline nameSpaceName="bowl" mapDEFToID="true" onclick='animateModel();' url="assets/x3d/Bowl1.x3d"> </inline>
+                </scene>
+            </x3d>
+        </div>
+        
+        <!-- The JavaScript and PHP hook generates the gallery here -->
+        <div id="gallery2"></div> <!-- The HTML handler in the gallery_gnerator.js code can be used to add in the onclick='animateModel();' here -->
+        
+    </div>
+    
+    <!-- The text data dynamically retriebved for the data.joson file is placed here -->
+    <div class="drinksText">
+            <div id="title_coke"></div> 
+            <div id="subTitle_coke"></div>        
+         	<div id="description_coke"></div>  
+        	<p> <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola/" class="button">Find out more ...</a></p>
+    </div>	<!-- End drinksText -->   
+  </div> <!-- End Coke -->
+
+  <!-- This is the content for Layout Div Tag "sprite" --> 
+  <div id="sprite" style="display:none;">
+    <div class="modelBg">
+    <!--
+    <div id="main_3d_image"> 
+    -->
+		<div id="cameraButtons">
+            <!-- <h2>Camera</h2> -->
+            <div class="btn-group-vertical">
+            	<!-- Note the onclick='animateModel();' added to the button -->
+                <button type="button" class="btn btn-primary btn-responsive">Cameras</button>
+                <button type="button" class="btn btn-success btn-responsive">Spin</button>
+                <button type="button" class="btn btn-success btn-responsive">Angle</button>
+                <button type="button" class="btn btn-success btn-responsive">Back</button>
+                <button type="button" class="btn btn-success btn-responsive">Left</button>
+                <button type="button" class="btn btn-success btn-responsive">Right</button>
+                <button type="button" class="btn btn-success btn-responsive">Top</button>
+                <button type="button" class="btn btn-success btn-responsive">Front</button>
+            </div>
+        </div>
+        <!-- Insert your 3D models here -->
+        <div id="model3d">
+            <x3d >
+            	<scene>
+                	<inline nameSpaceName="model" mapDEFToID="true" onclick='animateModel();' url="assets/x3d/sprite.x3d"> </inline>
+            	</scene>
+        	</x3d>
+        </div>
+        
+        <div id="gallery3"></div> 
+
+    </div>
+    <div class="drinksText">
+            <div id="title_sprite"></div>     
+            <div id="subTitle_sprite"></div>        
+         	<div id="description_sprite"></div>   
+      		<p> <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola/" class="button">Find out more ...</a></p>
+    </div>	<!-- End drinksText -->
+  </div> <!-- End Sprite -->
+
+  <!-- This is the content for Layout Div Tag "pepper" -->
+  <div id="pepper" style="display:none;">
+    <div class="modelBg">
+    <!--
+    <div id="main_3d_image"> 
+    -->
+		<div id="cameraButtons">
+            <!-- <h2>Camera</h2> -->
+            <div class="btn-group-vertical">
+            	<!-- Note the onclick='animateModel();' added to the button -->
+                <button type="button" class="btn btn-primary btn-responsive">Cameras</button>
+                <button type="button" class="btn btn-success btn-responsive">Spin</button>
+                <button type="button" class="btn btn-success btn-responsive">Angle</button>
+                <button type="button" class="btn btn-success btn-responsive">Back</button>
+                <button type="button" class="btn btn-success btn-responsive">Left</button>
+                <button type="button" class="btn btn-success btn-responsive">Right</button>
+                <button type="button" class="btn btn-success btn-responsive">Top</button>
+                <button type="button" class="btn btn-success btn-responsive">Front</button>
+                
+            </div>
+        </div>
+        <!-- Insert your 3D models here -->
+        <div id="model3d">
+            <x3d >
+            	<scene>
+                	<inline nameSpaceName="model" mapDEFToID="true" onclick='animateModel();' url="assets/x3d/pepper.x3d"> </inline>
+            	</scene>
+        	</x3d>
+        </div>
+        
+        <div id="gallery4"></div>
+               
+    </div>
+    <div class="drinksText">
+            <div id="title_pepper"></div>     
+            <div id="subTitle_pepper"></div>  
+         	<div id="description_pepper"></div>     
+      		<p> <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola/" class="button">Find out more ...</a></p>
+    </div>	<!-- End drinksText -->
+  </div> <!-- End Pepper -->
+  
+  
+  <div id="footer">
+  	<!-- New class pullLeft and pullRight created to replace footContents -->
+    <div class="pullLeft">
+        <p> &copy 2016 - 3D Applications  | <a href="javascript:changeLook()">Restyle</a> | <a href="javascript:changeBack()">Reset</a></p>
+    </div>
+    <div class="pullRight">
+    	<a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>

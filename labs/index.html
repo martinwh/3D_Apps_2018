@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mobile Web 3D Applications</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>ß
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/getHomePageData.js"></script>
+  </head>
+  <body>
+    <!-- 
+     * This div provides a default nav bar style, which can be fixed at the top of the screen
+     * You can set also use navbar-inverse to make the navbar black, and you can also set the navbar-static-top to ...
+     --> 
+    <div class="navbar navbar-preheader navbar-default navbar-fixed-top" role="navigation">  
+      <div class="container">     
+        <div class="navbar-header">
+            
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="#" class="navbar-brand">
+                3D Applications
+            </a>
+
+          </div>     
+
+        <div class="navbar-collapse collapse">          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Labs<b class="caret"></b></a>             
+				<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+				  <!-- Week 1 Lab Results -->
+                  <li class="dropdown-submenu">
+					<a href="#">Week 1 Lab Results</a>
+					<ul class="dropdown-menu">
+						<li><a href="../lab1/dreamweaver2016">Dreamweaver 2016</a></li>
+						<li><a href="../lab1/bootstrap2016/">Bootstrap 2016</a></li>
+                        <li><a href="../lab1/bootstrap2017/">Bootstrap 2017</a></li>
+					</ul>			
+				  </li>
+				  
+                  <!-- Week 2 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 2 Lab Results</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Coco Cola 3D</a></li>
+						<li><a href="#">Sprite 3D</a></li>
+						<li><a href="#">Dr Pepper 3D</a></li>
+					</ul>	
+				   </li>
+				  
+                  <!-- Week 3 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 3 Lab Results</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Coke X3DOM</a></li>
+						<li><a href="#">Sprite X3DOM</a></li>
+						<li><a href="#">Dr Pepper X3DOM</a></li>
+				   	</ul>	
+				  </li>
+                  
+                  <!-- Week 4 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 4 Lab Results</a>
+					<ul class="dropdown-menu">
+						<li><a href="../lab4/dreamweaver2016/">Dreamweaver 2016</a></li>
+                        <li><a href="../lab4/bootstrap2016/">Bootstrap 2016</a></li>
+                        <li><a href="../lab4/bootstrap2017/">Bootstrap 2017</a></li>
+					</ul>	
+				  </li>
+                  
+                  <!-- Week 5 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 5 Lab Results</a>
+					<ul class="dropdown-menu">
+						<li><a href="../lab5/dreamweaver2016/">3D App — DW 2016</a></li>
+                        <li><a href="../lab5/bootstrap2016/">3D App — BS 2016</a></li>
+                        <li><a href="../lab5/bootstrap2017/">3D App — BS 2017</a></li>
+                        
+					</ul>	
+				  </li>
+                  
+                  <!-- Week 6 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 6 Lab Results</a>
+					<ul class="dropdown-menu">
+                        <li><a href="../lab6/dreamweaver2015/">DW 2015</a></li>
+                        <li><a href="../lab6/dreamweaver2016/">DW 2016</a></li>
+                        <li><a href="../lab6/bootstrap2017/initial/index.html">BS 2017 Initial</a></li>
+                        <li><a href="../lab6/bootstrap2017/refined/index.html">BS 2017 Refined</a></li>
+                        <li><a href="../lab6/bootstrap2017/finished/index.html">BS 2017 Finished</a></li>
+                        <li><a href="../lab6/prototypeVirtualMuseum/completed_part_3/">Virtual Museum</a></li>
+					</ul>	
+				  </li>  
+                  
+                  <!-- Week 7 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 7 Lab Results</a>
+					<ul class="dropdown-menu">
+                          <!-- Lab Notes Examples -->
+                          <li class="dropdown-submenu">
+                                <a href="#">PHP Examples</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../lab7/examples_2015/php/example1/index.php">Example 1</a></li>
+                                    <li><a href="../lab7/examples_2015/php/example2/index.php">Example 2</a></li>
+                                    <li><a href="../lab7/examples_2015/php/example3/index.php">Example 3</a></li>
+                                </ul>
+                          </li>
+                          <!-- Lab Part A Tutorial Results -->
+                          <li class="dropdown-submenu">
+                               <a href="#">MVC Part A</a>
+                               <ul class="dropdown-menu">
+                                    <li><a href="../lab7/part_a/my_mvc/index.php/dbgetdata">Get Car Data</a></li>
+                               </ul>
+                          </li>
+                          <!-- Lab Part B Tutorial Results -->
+                          <li class="dropdown-submenu">
+                                <a href="#">MVC Part B</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../lab7/part_b/my_mvc/index.php/dbgetdata">Get Car Data</a></li>
+                                </ul>
+                         </li>  
+                      	 <!-- Lab Part C Tutorial Results -->
+                         <li class="dropdown-submenu">
+                          	<a href="#">MVC Part C</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../lab7/part_c/my_mvc/index.php/dbGetData">Get Car data</a></li>
+                                <li><a href="../lab7/part_c/my_mvc/index.php/loadcarsbychoice">Choose a car Model</a></li>
+                            </ul>
+                         </li> 	
+                  </ul> 
+
+                  <!-- Week 8 Lab Results -->
+                  <li class="divider"></li> 
+				  <li class="dropdown-submenu">
+					<a href="#">Week 8 Lab Results</a>
+					<ul class="dropdown-menu">
+						<li><a href="../lab8/virtualmuseum/index.php/">Virtual Museum</a></li>  
+					</ul>	
+				  </li>                            			
+				</ul>
+			</li>
+			
+            <li><a href="#">About</a></li>
+            <li class="active"><a href="#">Home</a></li>  
+            <!--<li><a href="#contact" data-toggle="modal">Contact</a></li>-->
+          </ul>
+        </div>
+      </div>
+  </div>
+
+    <!-- 
+     * This div adds a jumbotron container
+     --> 
+	<div class="container">
+      <!--<div class="jumbotron">-->
+        <div id="main_3d_image">
+            <div id="main_text" class="col-sm-4">
+                <div id="title_main"></div> 
+                <div id="subTitle_main"></div>        
+                <div id="description_main"></div>  
+            </div>   
+        </div>  
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="#" class="thumbnail">
+              <img src="images/lab1.jpg" alt="Lab 1">
+            </a>
+            <div id="title_lab1"></div> 
+            <div id="subTitle_lab1"></div>        
+         	<div id="description_lab1"></div>  
+            <a href="../lab1/dreamweaver2016" class="btn btn-warning">DW 2016</a>
+            <a href="../lab1/bootstrap2016/" class="btn btn-primary">BS 2016</a>
+            <a href="../lab1/bootstrap2017/" class="btn btn-success">BS 2017</a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="thumbnail">
+              <img src="images/lab2.jpg" alt="Lab 2">
+            </a>
+            <div id="title_lab2"></div> 
+            <div id="subTitle_lab2"></div>        
+         	<div id="description_lab2"></div>  
+            <!-- <a href="#" class="btn btn-danger">Coke</a> 
+                 <a href="#" class="btn btn-danger">Sprite</a>
+                 <a href="#" class="btn btn-danger">Dr Pepper</a>
+            -->
+            <img class="img-thumbnail" id="1" data-toggle="modal" data-target="#myModal" src="../lab2/coke/renderoutput/coke.jpg" alt="Coke Lab 1" width="80" height="60">
+            <img class="img-thumbnail" id="1" data-toggle="modal" data-target="#myModal" src="../lab2/sprite/renderoutput/sprite.jpg" alt="Sprite Lab 1" width="80" height="60">
+            <img class="img-thumbnail" id="1" data-toggle="modal" data-target="#myModal" src="../lab2/pepper/renderoutput/pepper.jpg" alt="Pepper Lab 1" width="80" height="60">
+
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="thumbnail">
+              <img src="images/lab3.jpg" alt="Lab 3">
+            </a>
+            <div id="title_lab3"></div> 
+            <div id="subTitle_lab3"></div>        
+         	<div id="description_lab3"></div>  
+            <a href="../lab3/coke/export/coke_no_animation.html">
+                <img class="img-thumbnail" id="1" data-toggle="modal" data-target="#myModal" src="../lab3/coke/renderoutput/coke.jpg" alt="Coke Lab 1" width="80" height="60">
+            </a>
+            <a href="#">
+                <img class="img-thumbnail" id="1" data-toggle="modal" data-target="#myModal" src="../lab3/sprite/renderoutput/sprite.jpg" alt="Sprite Lab 1" width="80" height="60">
+            </a>
+            <a href="#">
+                <img class="img-thumbnail" id="1" data-toggle="modal" data-target="#myModal" src="../lab3/pepper/renderoutput/pepper.jpg" alt="Pepper Lab 1" width="80" height="60">                
+            </a>
+          </div>
+        </div>    
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="#" class="thumbnail">
+              <img src="images/lab4.jpg" alt="Lab 4">
+            </a>
+            <div id="title_lab4"></div>
+            <div id="subTitle_lab4"></div>        
+         	<div id="description_lab4"></div>  
+            <a href="../lab4/dreamweaver2016" class="btn btn-warning">DW 2016</a>
+            <a href="../lab4/bootstrap2016" class="btn btn-info">BS 2016</a>
+            <a href="../lab4/bootstrap2017" class="btn btn-success">BS 2017</a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="thumbnail">
+              <img src="images/lab5.jpg" alt="Lab 5">
+            </a>
+            <div id="title_lab5"></div>
+            <div id="subTitle_lab5"></div>
+         	<div id="description_lab5"></div>  
+            <a href="../lab5/dreamweaver2016" class="btn btn-warning">DW 2016</a>
+            <a href="../lab5/bootstrap2016" class="btn btn-info">DW 2016</a> 
+            <a href="../lab5/bootstrap2017" class="btn btn-success">BS 2017</a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="thumbnail">
+              <img src="images/lab6.jpg" alt="Lab 6">
+            </a>
+            <div id="title_lab6"></div> 
+            <div id="subTitle_lab6"></div>        
+         	<div id="description_lab6"></div>  
+            <a href="../lab6/dreamweaver2015/index.html" class="btn btn-warning">DW 2016</a>
+            <a href="../lab6/dreamweaver2016/index.html" class="btn btn-warning">DW 2016</a>
+            <a href="../lab6/bootstrap2017/index.html" class="btn btn-success">BS 2017</a>
+            <a href="../lab6/prototypeVirtualMuseum/completed_part_3/" class="btn btn-success">Proto - VM</a>
+          </div>
+        </div>
+        
+	</div>   
+
+    <!-- 
+     * This div provides a default nav bar style, which can be fixed at the bottom of the screen
+     * You can set also use navbar-inverse to make the navbar black, and style the footer text with navbar-text
+     --> 
+    <!--<div class="navbar navbar-static-bottom navbar-inverse" role="navigation">-->
+    <div class="footer">
+      <div class="container">   
+        <div class="navbar-text pull-left">
+          <p> &copy 2017 Mobile Web 3D Applications </p>
+        </div>
+        <div class="navbar-text pull-right">
+          <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+          <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+        </div>
+      </div>
+    </div> 
+      
+    <!-- Create a shared Modal for all the images to display the larger version of the above image assets -->
+    <div id="myModal" class="modal fade"  role="dialog">
+        <div class="modal-dialog modal-lg">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <!-- modal header -->
+            <div class="modal-header">
+              <!-- I need to figure out how to pass the subTitle into the model to chnage the Modal header for each asset? -->
+              <div class="modal-title">Image Asset</div>
+            </div>
+            <!-- modal body -->
+            <div class="modal-body">
+                <img class="img-responsive" src="">
+            </div>
+            <!-- modal footer -->
+            <div class="modal-footer"> 
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div> 
+          </div>
+        </div>
+    </div>
+
+    <!-- Create a contact modal -->
+    <div class="modal fade" id="contact" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form class="form-horizontal" role="form">
+                <div class="modal-header">
+                  <h4>Contact:</h4>
+                </div>
+                <div class="modal-body">
+                  <!--<p>General queries: Please use the <b>Mobile Web 3D Knowledge Share</b></p>
+                  <p>Specific queries, knock on my door: <b>Chichester 1, 126 </b>, or talk to me in the lab</p>
+                  <p> <b>Send me an email</b>, but I get hundreds a day, so I can't guarantee the response time</p>
+                  <p> <b>Don't leave a message on my answer phone</b>; I don't check it!</p> -->
+                  <div class="form-group">
+                    <label for="contact-name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="contact-name" placeholder="First & Last Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="contact-email" placeholder="example@sussex.ac.uk">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-message" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="contact-message" rows="6"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a class="btn btn-default" data-dismiss="modal">Close</a>
+                  <!-- You still need to process this with PHP at the backend 
+                      Suggested tutorial: http://tangledindesign.com/how-to-create-a-contact-form-using-html5-css3-and-php/﻿ 
+                    -->
+                  <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+           </form>     
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core Javascript
+    ================================================-->
+    <!-- Placed at the end of the document so that the pages load faster -->
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Modal lightbox for image viewing -->
+    <script src="js/lightBox.js"></script>   
+  </body>
+</html>
