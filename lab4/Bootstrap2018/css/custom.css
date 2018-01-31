@@ -259,6 +259,7 @@ There is plenty more styling to do than indicated here, in mobile it still defau
 .img-thumbnail {
     padding: 0.25rem;
     margin-top: 5px;
+    margin-bottom: 5px;
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 0.25rem;
@@ -284,7 +285,7 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     border: 1px solid transparent;
 }
 
-.cameraBtns {
+.camera-btns {
     /* background-color: rgba(0, 0, 255, 0.3);  */
     border-color: black; 
     border-style: solid;
@@ -293,10 +294,10 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     padding: 0px;
 }
 
-.cameraBtns > p  {
+.camera-btns > p  {
     font-size: 15px;
     color: red;
-    padding-left: 0px;
+    padding: 5px 0px;
     font-weight: 900; 
 }
 
@@ -311,14 +312,36 @@ There is plenty more styling to do than indicated here, in mobile it still defau
 }
 
 .btn-responsive {
-    padding: 6px 10px;
+    padding: 10px 10px;
     font-size: 90%;
     line-height: 1.2;
     white-space: normal !important;
 }
 
+.gallery-header {
+    color: white;
+}
 
+.gallery-header:hover {
+    color: green;
+    border: 1px solid transparent;
+}
 
+.model3D  {
+    background-color: rgba(255, 255, 255, 0.0); /* Adjust the transparency to bring the color forward */
+    border-radius: 5px;
+    border: 0px solid rgba(0, 0, 0, 1.0);
+    padding: 2px;
+    height: 200px;
+}
+
+X3D, x3d {
+    border-radius: 5px;
+    border: 0px solid rgba(255, 0, 0, 1.0);
+    width: 100%;
+    height: 100%
+    
+}
 
 
 
@@ -373,6 +396,10 @@ There is plenty more styling to do than indicated here, in mobile it still defau
 
     .social {
         padding-top: 7px;
+    }
+
+    .model3D  {
+        height: 310px;
     }
 
 }
@@ -492,6 +519,10 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     .social {
         padding-top: 7px;
     }
+
+    .model3D  {
+        height: 380px;
+    }
 }
 
 /* Large devices (desktops, 992px and up)
@@ -604,6 +635,12 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     .social {
         padding-top: 7px;
     }
+
+    .model3D  {
+        height: 450px;
+    }
+    
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)

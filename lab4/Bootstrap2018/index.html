@@ -46,7 +46,7 @@
                     <a class="nav-link active" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Web 3D Applications" data-content="3D Apps is a final year and postgraduate module ...">About</a>
                   </li>
               
                   <!-- Dropdown -->
@@ -55,13 +55,13 @@
                       Drinks
                     </a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Coca Cola</a>
-                      <a class="dropdown-item" href="#">Sprite</a>
-                      <a class="dropdown-item" href="#">Dr Pepper</a>
+                      <a class="dropdown-item" href="coke.html">Coca Cola</a>
+                      <a class="dropdown-item" href="sprite.html">Sprite</a>
+                      <a class="dropdown-item" href="pepper.html">Dr Pepper</a>
                     </div>
                   </li>
                       <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
                   </li>
                 </ul>
             </div>
@@ -83,7 +83,7 @@
                   </div>
             </div>
           </div>  
-            
+
           <div class="row">
                 <div class="col-sm-4">
                     <div class="card">
@@ -93,7 +93,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Coca Cola</h3>
                           <p class="card-text">It was 1886, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special!</p>    
-                          <a href="#" class="btn btn-primary">Find out more ...</a>                 
+                          <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola" class="btn btn-primary">Find out more ...</a>                 
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Sprite</h3>
                           <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries. Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories.</p>
-                          <a href="#" class="btn btn-primary">Find out more ...</a>
+                          <a href="http://www.coca-cola.co.uk/drinks/sprite/sprite" class="btn btn-primary">Find out more ...</a>
                         </div>
                         
                     </div>
@@ -120,7 +120,7 @@
                         <div class="card-body">
                           <h3 class="card-title">Dr Pepper</h3>
                           <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885.</p>
-                          <a href="#" class="btn btn-primary">Find out more ...</a>
+                          <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper" class="btn btn-primary">Find out more ...</a>
                         </div>
                     </div>
                 </div>
@@ -142,6 +142,32 @@
           </div>
       </nav> 
 
+      <!-- My 3D App modals -->
+      <!-- Contact modal -->
+      <!-- The Modal -->
+      <div class="modal fade" id="contactModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">3D App Contact Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                <p>Dr Martin White, Chichester 1, 126, Email: m.white@sussex.ac.uk</p>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -149,5 +175,8 @@
       <script src="js/popper.min.js" crossorigin="anonymous"></script>
       <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
       <script src="js/fontawesome-all.min.js"></script>
+      <!-- Custom JavaScript code for your 3d App -->
+      <script src="js/custom.js" crossorigin="anonymous"></script>
+
   </body>
 </html>
