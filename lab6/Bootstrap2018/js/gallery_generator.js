@@ -39,17 +39,14 @@ $(document).ready(function() {
 			response = xmlHttp.responseText.split("~");
 			// Loop round the response array
 			for (var i=0;i<response.length;i++) {
-				// Handeler to build the HTML string
+				// Handler to build the HTML string
 				// Use this to provide a link to the image
-				htmlCode += '<a href="'+ response[i] +' ">';
+				htmlCode += '<a href="'+ response[i] + ' "data-fancybox data-caption="My X3D model render" > ';
 				htmlCode += '<img class="card-img-top img-thumbnail" src="' + response[i] + '"/>';
 				htmlCode += '</a>';			
 			}
 			// Return the HTML string to each of the 4 3D App pages
-			document.getElementById('gallery1').innerHTML = htmlCode;
-			document.getElementById('gallery2').innerHTML = htmlCode;
-			document.getElementById('gallery3').innerHTML = htmlCode;
-
+			document.getElementById('gallery').innerHTML = htmlCode;
 		}
 	}
 });

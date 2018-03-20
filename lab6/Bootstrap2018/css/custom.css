@@ -199,12 +199,19 @@ There is plenty more styling to do than indicated here, in mobile it still defau
 
 /* CSS rule to overwrite the bootstrap.css rules for setting the active font color and background colour
 */
-.navbar_coca_cola .navbar-nav .nav-item > .active, 
-.navbar_coca_cola .navbar-nav > .active > a:hover, 
+.navbar_coca_cola .navbar-nav .nav-item > .active,  
 .navbar_coca_cola .navbar-nav > .active > a:focus {
     color:  #760003; /* Font color for active font */
     background-color: #3399ff; /* Blue color for background */
     border: 1px solid #dee2e6;
+}
+/* CSS rule to overwrite the bootstrap.css rules for setting the active font color and background colour when on hover
+*/
+.navbar_coca_cola .navbar-nav > .nav-item:hover > .active {
+    color:  green; /* Font color for active font */
+    background-color: #3399ff; /* Blue color for background */
+    border: 1px solid #3399ff;
+    border-radius: 3px;
 }
 
 /* A set of CSS rules to change the Bootstrap defaults for the menu link text color, hover, background, focus
@@ -271,10 +278,16 @@ There is plenty more styling to do than indicated here, in mobile it still defau
 
 .copyright {
     padding-top: 13px;
+    font-size: 80%;
 }
 
 .social {
     padding-top: 0px;
+}
+
+.img-narrow {
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
 }
 
 .img-thumbnail {
@@ -287,7 +300,7 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     height: auto;
 }
 
-.gallery .img-thumbnail{
+.gallery .img-thumbnail {
     background-color: rgba(255, 255, 255, 0.0);
     padding: 0.25rem;
     margin: 5px;
@@ -297,7 +310,7 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     height: auto;
 }
 
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+.nav-tabs .nav-link.active, .nav-item.show {
     color:  #760003; /* Font color for active font */
     background-color: #3399ff; /* Blue color for background */
     border-color: #dee2e6 #dee2e6 #fff;
@@ -315,35 +328,11 @@ There is plenty more styling to do than indicated here, in mobile it still defau
     border: 1px solid transparent;
 }
 
-.camera-btns {
-    /* background-color: rgba(0, 0, 255, 0.3);  */
-    border-color: black; 
-    border-style: solid;
-    border-width: 0px;
-    margin-top: 0px;
-    padding: 0px;
-}
-
-.camera-btns > p  {
-    font-size: 15px;
-    color: red;
-    padding: 5px 0px;
-    font-weight: 900; 
-}
-
-.camera-font {
-    font-weight: 400;   
-    color: white;
-}
-
-.camera-font:hover {
-    font-weight: 700;   
-    color: rgb(3, 3, 3);
-}
-
 .btn-responsive {
-    padding: 10px 10px;
-    font-size: 90%;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    padding: 5px 5px;
+    font-size: 80%;
     line-height: 1.2;
     white-space: normal !important;
 }
@@ -566,7 +555,7 @@ X3D, x3d {
     }
 
     .navbar_coca_cola {
-        background-color: grey; 
+        background-color: rgb(73, 141, 161); 
         min-height: 90px;
     }
 
