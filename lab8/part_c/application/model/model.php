@@ -29,7 +29,7 @@ class Model {
 	public function dbCreateTable()
 	{
 		try {
-			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
+			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
 			return "Model_3D table is successfully created inside test1.db file";
 		}
 		catch (PD0EXception $e){
@@ -38,16 +38,31 @@ class Model {
 		$this->dbhandle = NULL;
 	}
 	
+	// This is a simple fix to represent, what would in reality be, a table in the database containing the brand names. 
+	// The database schema would then contain a foreign key for each drink entry linking back to the brand name
+	// This stuture allows us to read the list of brand names to populate a menu in a view
+	public function dbGetBrand()
+	{
+		// Return the car Brand Names
+		return array("-", "Coke", "Coke Light","Coke Zero","Sprite", "Dr Pepper", "Fanta");
+	}
+
 	public function dbInsertData()
 	{
 		try{
 			$this->dbhandle->exec(
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (1, 'X3D Coke Model', 'string_2', 'string_3','string_4','string_5'); " .
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (2, 'X3D Sprite Model', 'string_2', 'string_3','string_4','string_5'); " .
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (3, 'X3D Pepper Model', 'string_2', 'string_3','string_4','string_5'); ");
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (1, 'Coke', 'X3D Coke Model', 'string_2', 'string_3','string_4','string_5'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (2, 'Sprite', 'X3D Sprite Model', 'string_2', 'string_3','string_4','string_5'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (3, 'Fanta', 'X3D Fanta Model', 'string_2', 'string_3','string_4','string_5'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (4, 'Coke Light', 'X3D Coke Light Model', 'string_2', 'string_3','string_4','string_5'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (5, 'Coke Zero', 'X3D Coke Zero Model', 'string_2', 'string_3','string_4','string_5'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (6, 'Dr Pepper', 'X3D Dr Pepper Model', 'string_2', 'string_3','string_4','string_5'); ");
 			return "X3D model data inserted successfully inside test1.db";
 		}
 		catch(PD0EXception $e) {
@@ -72,6 +87,7 @@ class Model {
 				// Don't worry about this, it's just a simple test to check we can output a value from the database in a while loop
 				// echo '</br>' . $data['x3dModelTitle'];
 				// Write the database conetnts to the results array for sending back to the view
+				$result[$i]['brand'] = $data['brand']; // Not used in the view, instead using the fake dbGetBrand() function above
 				$result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
 				$result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
 				$result[$i]['modelTitle'] = $data['modelTitle'];

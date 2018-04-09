@@ -28,7 +28,7 @@
   </div>
 
   <div class="box">
-    <p> Results returneed form the flickr web service: </p>
+    <p> Results returned form the flickr web service: </p>
     <div id="images" ></div>
   </div>
 
@@ -37,8 +37,10 @@
   <script language="javascript">
     function loadImages()
     {
-        var txt = document.getElementById('txt').value
-        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+        var txt = document.getElementById('txt').value;
+        // Create a URI for the Flickr web service API call
+        var urlFlickr = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        $.getJSON(urlFlickr,
           {
             tags: txt,
             tagmode:"all",

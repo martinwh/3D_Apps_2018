@@ -4,15 +4,17 @@
 		//$carName = 'Mercedes';
 
 		/*
-			Note: All the echo st aements used for debuging must be commented out once you are sure the code is ok, 
+			Note: All the echo statements used for debuging must be commented out once you are sure the code is ok, 
 			because the first echo will be returned to the calling view, so in this case the string 'Looking for ...'
-			will be returned, which is obvioulsy thenot the JSON packet!
+			will be returned, which is obvioulsy not the JSON packet!
 		*/
 		//echo 'Looking for model: ' . $carName . '</br></br>';
 
  		try {		
 			//echo 'Making database connection ...</br></br>';
- 			//Make a connection to the database
+			//Make a connection to the database
+			//Note the path to the database, we have to be explicit here with ../../ 
+			//because this model is not part of the Model class
 			$dbhandle = new PDO('sqlite:../../db/test1.db', 'user', 'password', array(
     													PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     													PDO::ATTR_EMULATE_PREPARES => false,

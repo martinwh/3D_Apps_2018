@@ -38,15 +38,25 @@ class Controller {
 		$this->load->view('view3DAppData', $data);
 	}  	
 	
-	//New methods for Part C of Lab 7 Tutorial, which use AJAX
-	//Flickr API
-	function getFlickrFeed()
+	// New methods for Part C of Lab 7 Tutorial, which use AJAX
+	// Flickr API
+	function apiGetFlickrFeed()
 	{
-		$this->load->view('getFlickrFeed');
+		$this->load->view('viewFlickrFeed');
 	}
-	function readJson()
+	// API call to read JSON data from a JSON file
+	function apiGetJson()
 	{
-		$this->load->view('readJson');
+		$this->load->view('viewJson');
+	}
+	// API call to select 3D images
+	function apiLoadImage()
+	{
+	   $data = $this->model->dbGetBrand();
+	   // Note, the viewDrinks.php view being loaded here calls a new model
+	   // called modelDrinkDetails.php, which is not part of the Model class
+	   // It is a separate model illustrating that you can have many models
+	   $this->load->view('viewDrinks', $data);
 	}
 	
 }
